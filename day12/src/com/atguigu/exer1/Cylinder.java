@@ -17,6 +17,12 @@ public class Cylinder extends Circle {
     }
 
     public double findVolume() {
-        return findArea() * length;
+        return super.findArea() * length;
+    }
+
+    @Override
+    public double findArea() { // 圆柱的表面积
+        return Math.PI * getRadius() * getRadius() * 2 +
+                2 * Math.PI * getRadius() * length;
     }
 }

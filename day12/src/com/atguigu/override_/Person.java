@@ -29,7 +29,7 @@ public class Person {
         this.age = age;
     }
 
-    public void eat() {
+    protected void eat() {
         System.out.println("吃饭");
     }
 
