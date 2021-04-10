@@ -2,7 +2,7 @@ package com.atguigu.override_;
 
 public class Person {
 
-    private String name;
+    public String name;
     private int age;
 
     public Person() {
