@@ -22,10 +22,18 @@ public class CheckAccount extends Account {
                 overdraft -= amount - getBalance();
 //                super.withdraw(getBalance());
                 setBalance(0);
-                System.out.println("本次透支了 " + (amount - getBalance()) + " 元");
-                System.out.println("账户余额为: " + getBalance());
-                System.out.println("透支余额为: " + overdraft);
+//                System.out.println("本次透支了 " + (amount - getBalance()) + " 元");
+//                System.out.println("账户余额为: " + getBalance());
+//                System.out.println("透支余额为: " + overdraft);
             }
         }
+    }
+
+    public double getOverdraft() {
+        return overdraft;
+    }
+
+    public void setOverdraft(double overdraft) {
+        this.overdraft = overdraft;
     }
 }

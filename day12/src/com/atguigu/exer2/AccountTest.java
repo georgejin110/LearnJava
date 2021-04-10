@@ -15,7 +15,10 @@ public class AccountTest {
 
         CheckAccount acc2 = new CheckAccount(1122, 20000, 0.045, 5000);
         acc2.withdraw(26000);
+        System.out.println("===========================");
         acc2.deposit(2000);
         acc2.withdraw(26000);
+        System.out.println("您的账户余额为: " + acc2.getBalance());
+        System.out.println("您的透支额度为: " + acc2.getOverdraft());
     }
 }
