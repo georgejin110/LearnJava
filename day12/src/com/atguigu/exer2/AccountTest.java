@@ -10,5 +10,12 @@ public class AccountTest {
         System.out.println();
         acc1.deposit(500);
         acc1.print();
+
+        System.out.println("=====================");
+
+        CheckAccount acc2 = new CheckAccount(1122, 20000, 0.045, 5000);
+        acc2.withdraw(26000);
+        acc2.deposit(2000);
+        acc2.withdraw(26000);
     }
 }

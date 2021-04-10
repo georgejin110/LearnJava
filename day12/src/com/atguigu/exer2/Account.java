@@ -17,7 +17,7 @@ public class Account {
     }
 
     public void withdraw(double amount) {
-        if (balance > amount) {
+        if (balance >= amount) {
             balance -= amount;
             return;
         }
@@ -34,7 +34,7 @@ public class Account {
 
     public void print() {
         System.out.println("您的账户余额为: " + balance);
-        System.out.println("月利率为: " + getMoneylyInterest());
+        System.out.println("月利率为: " + (getMoneylyInterest() * 100) + "%");
     }
 
     public int getId() {
