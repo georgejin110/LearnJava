@@ -1,5 +1,8 @@
 package com.learnMethod.instanceof_;
 
+/*
+    a instanceof A 判断 a 是否是类A的实例
+ */
 public class test {
     public static void main(String[] args) {
         Person person = new Woman();
