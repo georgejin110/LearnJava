@@ -19,4 +19,9 @@ public class BaconPizza extends Pizza{
     public void setWeight(double weight) {
         this.weight = weight;
     }
+
+    // 重写父类
+    public String show() {
+        return super.show() + "\n培根克数: " + getWeight() + "g";
+    }
 }

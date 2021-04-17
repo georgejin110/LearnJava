@@ -19,4 +19,9 @@ public class FruitPizza extends Pizza{
     public void setFruits(String fruits) {
         this.fruits = fruits;
     }
+
+    // 重写父类
+    public String show() {
+        return super.show() + "\n配料水果: " + getFruits();
+    }
 }

@@ -45,4 +45,9 @@ public class Pizza implements PizzaSizeInterface, PizzaPriceInterface, PizzaName
     public void setName(String name) {
         this.name = name;
     }
+
+    public String show() {
+        return "名称: " + getName() + "\n价格: " + getPrice() + "元\n大小: " + getSize() + "寸";
+    }
+
 }

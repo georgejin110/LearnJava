@@ -29,7 +29,7 @@ public class pizzaMain {
             printBaconPizza(pizza);
         } else if ("fruit".equals(name)) {
             // 水果匹萨
-            printFruitPizza(pizza);
+            printFruitPizza();
         }
     }
 
@@ -45,43 +45,39 @@ public class pizzaMain {
         double weight = in.nextDouble();
         baconPizza.setWeight(weight);
 
-        basicInfo(in, baconPizza);
-
-        // 打印
-        System.out.println("名称: " + baconPizza.getName());
-        System.out.println("价格: " + baconPizza.getPrice() + "元");
-        System.out.println("大小: " + baconPizza.getSize() + "寸");
-        System.out.println("培根克数: " + baconPizza.getWeight() + "g");
-    }
-
-    private static void printFruitPizza(Pizza pizza) {
-        Scanner in = new Scanner(System.in);
-        pizza.setName("水果匹萨");
-        FruitPizza fruitPizza = (FruitPizza) pizza;
-
-        // 输入水果
-        System.out.print("请输入你想要加入的水果: ");
-        String fruits = in.next();
-        fruitPizza.setFruits(fruits);
-
-        basicInfo(in, fruitPizza);
-
-        // 打印
-        System.out.println("名称: " + fruitPizza.getName());
-        System.out.println("价格: " + fruitPizza.getPrice() + "元");
-        System.out.println("大小: " + fruitPizza.getSize() + "寸");
-        System.out.println("配料水果: " + fruitPizza.getFruits());
-
-    }
-
-    private static void basicInfo(Scanner in, Pizza pizza) {
+        // 输入大小
         System.out.print("请输入匹萨的大小: ");
         int size = in.nextInt();
-        pizza.setSize(size);
+        baconPizza.setSize(size);
 
         // 输入价格
         System.out.print("请输入匹萨的价格: ");
         double price = in.nextDouble();
-        pizza.setPrice(price);
+        baconPizza.setPrice(price);
+
+        // 打印
+        System.out.println(baconPizza.show());
+    }
+
+    private static void printFruitPizza() {
+        Scanner in = new Scanner(System.in);
+
+        // 输入水果
+        System.out.print("请输入你想要加入的水果: ");
+        String fruits = in.next();
+
+        // 输入大小
+        System.out.print("请输入匹萨的大小: ");
+        int size = in.nextInt();
+
+        // 输入价格
+        System.out.print("请输入匹萨的价格: ");
+        double price = in.nextDouble();
+
+        FruitPizza fruitPizza = new FruitPizza(size,price,"水果匹萨",fruits);
+
+        // 打印
+        System.out.println(fruitPizza.show());
+
     }
 }
