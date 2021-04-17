@@ -29,7 +29,8 @@ public class pizzaMain {
             printBaconPizza(pizza);
         } else if ("fruit".equals(name)) {
             // 水果匹萨
-            printFruitPizza();
+            name = "水果匹萨";
+            printFruitPizza(name);
         }
     }
 
@@ -59,7 +60,7 @@ public class pizzaMain {
         System.out.println(baconPizza.show());
     }
 
-    private static void printFruitPizza() {
+    private static void printFruitPizza(String name) {
         Scanner in = new Scanner(System.in);
 
         // 输入水果
@@ -74,7 +75,7 @@ public class pizzaMain {
         System.out.print("请输入匹萨的价格: ");
         double price = in.nextDouble();
 
-        FruitPizza fruitPizza = new FruitPizza(size,price,"水果匹萨",fruits);
+        FruitPizza fruitPizza = new FruitPizza(size,price,name,fruits);
 
         // 打印
         System.out.println(fruitPizza.show());
